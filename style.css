@@ -6,7 +6,15 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.adresse{
+    width: 500px;
+    padding-left: 50px;
+    padding-top: 20px;
 
+}
+.logo{
+    margin-bottom: 30px;
+}
 a,
 button {
     transition: all .3s ease-in-out;
@@ -45,7 +53,7 @@ a:hover {
 }
 
 .bloc-lg {
-    padding: 100px 50px;
+    padding: 50px 50px;
 }
 
 .bloc-md {
@@ -283,9 +291,9 @@ a:hover {
     padding-left: 0;
 }
 
-#bloc-1-hero h1 {
+/*#bloc-1-hero h1 {
     font-size: 32px;
-}
+}*/
 
 .navbar {
     margin-bottom: 0;
@@ -458,15 +466,13 @@ nav .caret {
 .btn-d:focus {
     color: #FFF;
     background: rgba(0, 0, 0, .3);
+   
 }
 
 button {
     outline: none!important;
 }
 
-.btn-rd {
-    border-radius: 40px;
-}
 
 .btn-clean {
     border: 1px solid rgba(0, 0, 0, .08);
@@ -508,6 +514,18 @@ button {
 .form-control {
     border-color: rgba(0, 0, 0, .1);
     box-shadow: none;
+    display: block;
+    width: 500px;
+    height: 25px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    
+    border: 1px solid #212529;
+    border-radius: 5px;
 }
 
 .scrollToTop {
@@ -677,7 +695,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .tight-width-whitespace {
@@ -737,10 +755,12 @@ h4 {
 
 .white {
     color: #FFFFFF!important;
+    margin-bottom: 30px;
 }
 
 .portfolio-thumb {
     margin-bottom: 24px;
+    border-radius: 20px 20px 0 0;
 }
 
 .portfolio-row {
@@ -759,7 +779,7 @@ h4 {
 
 .bold-link {
     font-weight: 900;
-    text-decoration: underline!important;
+    font-size: 20px;
 }
 
 .bgc-white {
@@ -775,21 +795,27 @@ h4 {
 }
 
 .tc-white {
-    color: #F3976C!important;
+    color: #f3976c !important;
+    text-align: center;
+    
 }
 
 .btn-atomic-tangerine {
     background: #F3976C;
     color: #FFFFFF!important;
+    border-radius: 30px;
+    width: 200px;
+    
 }
 
 .btn-atomic-tangerine:hover {
-    background: #c27956!important;
-    color: #FFFFFF!important;
+    background-color: #F3976C;
+    transform: scale(1.15);
 }
 
 .ltc-white {
     color: #FFFFFF!important;
+    
 }
 
 .ltc-white:hover {
@@ -818,13 +844,17 @@ h4 {
 }
 
 .bg-banniere {
-    background-image: url("img/agence-la-panthere.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/agence-la-panthere.jpg");
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/image-de-presentation.jpg");
 }
 
+.h2-center{
+    padding-left: 150px;
+    padding-right: 150px;
+}
 @media (max-width: 1024px) {
     .bloc {
         padding-left: 20px;
@@ -850,13 +880,13 @@ h4 {
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
     .b-parallax {
-        background-attachment: scroll;
+        background-attachment: fixed;
     }
 }
 
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
-        background-attachment: scroll;
+        background-attachment: fixed;
     }
 }
 
@@ -865,7 +895,7 @@ h4 {
         width: 100%;
     }
     .b-parallax {
-        background-attachment: scroll;
+        background-attachment: fixed;
     }
     .page-container,
     #hero-bloc {
@@ -873,19 +903,15 @@ h4 {
         position: relative;
     }
     .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
-    }
-    .bloc-group,
-    .bloc-group .bloc {
-        display: block;
-        width: 100%;
-    }
-    .bloc-fill-screen .fill-bloc-top-edge,
-    .bloc-fill-screen .fill-bloc-bottom-edge {
-        padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+    width: 100%;
+    clear: both;
+    background: 50% 50% no-repeat;
+    padding: 0 50px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
     }
 }
 
